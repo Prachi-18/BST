@@ -12,30 +12,6 @@ public class ScapegoatTree<T extends Comparable<T>> extends
 
 	@Override
 	public void add(T t) {
-		// TODO
-		/*if(t == null) {
-			throw new NullPointerException("element is null");
-		}
-		BSTNode<T> nn = new BSTNode<T>(t,null,null);
-		upperBound++;
-		super.add(t);
-		T value = this.getHelper(root,t);
-		if(height() > Math.log(upperBound)/Math.log((double)3/2)){
-			BSTNode<T> beta = nn;
-			BSTNode<T> papa = nn.parent;
-			while((double)subtreeSize(beta)/subtreeSize(papa)<= (double)2/3) {
-				papa = papa.parent;
-				beta = beta.parent;
-			}
-			ScapegoatTree<T> chhotaped = new ScapegoatTree<T>();
-			chhotaped.root = papa;
-			BSTNode<T> badaPapa = papa.parent;
-			chhotaped.balance();
-			if(badaPapa.getLeft() == papa) badaPapa.setLeft(chhotaped.root);
-			else badaPapa.setRight(chhotaped.root);
-			
-		} */
-		
 		if (t == null) {
 			throw new NullPointerException();
 		}
@@ -85,7 +61,7 @@ public class ScapegoatTree<T extends Comparable<T>> extends
 	}
 	@Override
 	public boolean remove(T value) {
-		// TODO
+		
 		if(super.remove(value)){
 			if(this.size()*2 < upperBound){
 				this.balance();

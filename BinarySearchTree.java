@@ -26,7 +26,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public boolean contains(T t) {
-		// TODO
+		
 		return containHelper(root,t);
 	}
 	
@@ -104,7 +104,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public T get(T t) {
-		// TODO
+		
 		return getHelper(root,t);
 	}
 	
@@ -150,7 +150,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 
 	@Override
 	public T getMinimum() {
-		// TODO
+		
 		return minHelper(root);
 	}
 	
@@ -168,7 +168,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 
 	@Override
 	public T getMaximum() {
-		// TODO
+		
 		return maxHelper(root);
 	}
    
@@ -185,7 +185,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 
 	@Override
 	public int height() {
-		// TODO
+		
 		return lambaihelper(root);
 	}
 
@@ -200,7 +200,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public Iterator<T> preorderIterator() {
-		// TODO
+		
 		Queue<T> q = new LinkedList<T>();
 		preOrderHelper(root,q);
 		return q.iterator();
@@ -231,7 +231,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public Iterator<T> postorderIterator() {
-		// TODO
+		
 		Queue<T> q = new LinkedList<T>();
 		postOrderHelper(root,q);
 		return q.iterator();
@@ -246,7 +246,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 
 	@Override
 	public boolean equals(BSTInterface<T> other) {
-		// TODO
+		
 		if(other == null)throw new NullPointerException("other is null");
 		return ekJaisaHelper(other.getRoot(),root);
 	}
@@ -267,7 +267,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 
 	@Override
 	public boolean sameValues(BSTInterface<T> other) {
-		// TODO
+		
 		if(other == null){
 			throw new NullPointerException();
 		}
@@ -284,7 +284,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 
 	@Override
 	public boolean isBalanced() {
-		// TODO
+		
 		if(isEmpty()){
 			return true;
 		}
@@ -300,7 +300,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
     @SuppressWarnings("unchecked")
 
 	public void balance() {
-		// TODO
+		
 		T[] arrarr = (T[]) new Comparable[size()];
 		Iterator<T> i1 = this.inorderIterator();
 		int i =0;
@@ -323,7 +323,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
         return nn1;   }
 	@Override
 	public BSTNode<T> getRoot() {
-        // DO NOT MODIFY
+        
 		return root;
 	}
 
